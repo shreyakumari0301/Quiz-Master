@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: QuizMaster
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    autoDeploy: true
+    region: oregon  # You can change this to your preferred region
+    healthCheckPath: /  # Adjust if you have a specific health check endpoint
